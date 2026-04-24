@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "startLocal": "export NODE_OPTIONS=--openssl-legacy-provider && ng serve",
-   "start": "npm install --legacy-peer-deps && ng serve",
+    "postinstall": "ngcc --properties es2015 browser module main",
+   "start": " ng serve",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider &&  ng build",
     "watch": "export NODE_OPTIONS=--openssl-legacy-provider &&  ng build --watch --configuration development",
     "test": "ng test"

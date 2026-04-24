@@ -8,7 +8,9 @@ import { UserAccountFacade } from '@spartacus/user/account/root';
   templateUrl: './djs-sitelogin.component.html',
   styleUrls: ['./djs-sitelogin.component.scss']
 })
-export class DjsSiteloginComponent implements OnInit {
+
+// extends LoginComponent
+export class DjsSiteloginComponent  implements OnInit {
 
   isLoggedIn$ = this.authService.isUserLoggedIn();
   user$ = this.userAccount.get();
