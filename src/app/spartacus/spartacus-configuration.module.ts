@@ -14,10 +14,13 @@ import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacu
       }
     },
   }), provideConfig(<SiteContextConfig>{
+    //  context: {
+    //   urlParameters: [ 'en','USD','electronics-spa']
+    // },   //will be http://localhost:64393/electronics-spa/en/USD/
     context: {
       currency: ['USD'],
       language: ['en'],
-    },
+    },  //will be http://localhost:64393/electronics-spa/en/USD/
   }), provideConfig(<I18nConfig>{
     i18n: {
       resources: translations,
