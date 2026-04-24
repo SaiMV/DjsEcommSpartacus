@@ -1,34 +1,25 @@
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import { EffectsModule } from "@ngrx/effects";
+import { StoreModule } from "@ngrx/store";
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { B2cStorefrontModule } from '@spartacus/storefront';
-import { translations, translationChunksConfig } from '@spartacus/assets';
+import { SpartacusModule } from './spartacus/spartacus.module';
 
 @NgModule({
+  declarations: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
-    B2cStorefrontModule.withConfig({
-      backend: {
-        occ: {
-          baseUrl:
-            'https://storefront.c39j2-walkersde1-d4-public.model-t.cc.commerce.ondemand.com',
-        },
-      },
-      context: {
-        baseSite: ['electronics-spa'],
-        urlParameters: ['baseSite', 'language', 'currency'],
-      },
-      i18n: {
-        resources: translations,
-        chunks: translationChunksConfig,
-        fallbackLang: 'en',
-      },
-    }),
+    HttpClientModule,
+    AppRoutingModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
+    SpartacusModule
   ],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
