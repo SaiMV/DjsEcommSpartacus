@@ -1,0 +1,32 @@
+.dks-header {
+    background-color: #005E3F;
+    /* DSG deep green */
+    padding: 15px 0;
+
+    .dks-user-actions {
+        color: #fff;
+
+        .action-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 20px;
+            cursor: pointer;
+
+            i {
+                font-size: 1.4rem;
+                margin-bottom: 3px;
+            }
+
+            span {
+                font-family: 'Roboto', sans-serif;
+                font-size: 0.85rem;
+                font-weight: 500;
+            }
+
+            &:hover {
+                color: #F5A623;
+            }
+        }
+    }
+}

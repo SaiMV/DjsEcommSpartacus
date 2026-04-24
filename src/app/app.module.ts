@@ -6,10 +6,11 @@ import { StoreModule } from "@ngrx/store";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpartacusModule } from './spartacus/spartacus.module';
+import { DjsSiteloginComponent } from './custom/components/djs-sitelogin/djs-sitelogin.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,3 +2,18 @@
 
 $styleVersion: 4.3;
 @import '~@spartacus/styles/index';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Oswald:wght@400;500;700;800&display=swap');
+
+:root {
+  /* Djs Sporting Goods Theme Colors */
+  --cx-color-primary: #005E3F; /* Deep Green */
+}
+
+
+header,footer, header .header, footer .footer{
+  background: #005E3F;
+}
+
+
